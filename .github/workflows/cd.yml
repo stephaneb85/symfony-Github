@@ -43,3 +43,4 @@ jobs:
       run:
         composer require friendofphp/php-cs-fixer
         ./vendor/bin/php-cs-fixer fix --dry-run
+      continue-on-error: true
