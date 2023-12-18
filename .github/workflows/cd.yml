@@ -69,7 +69,7 @@ jobs:
       continue-on-error: true
 
     - name: Give permission on ./bin/console
-      run: chmod +x bin/console
+      run: chmod +x bin/phpunit
 
     - name: PHP Unit
       run: ./bin/phpunit
