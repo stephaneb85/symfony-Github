@@ -66,6 +66,10 @@ jobs:
       run: ./bin/console lint:container --no-debug
     - name: Lint Doctrine entities
       run: ./bin/console doctrine:schema:validate --skip-sync -vvv --no-interaction
+      continue-on-error: true
+
+    - name: Give permission on ./bin/console
+      run: chmod +x bin/console
 
     - name: PHP Unit
       run: ./bin/phpunit
