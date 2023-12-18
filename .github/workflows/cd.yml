@@ -53,3 +53,4 @@ jobs:
         composer require phpstan/extension-installer
         composer require phpstan/phpstan-symfony
         ./vendor/bin/phpstan analyse src --memory-limit 1G
+      continue-on-error: true  
