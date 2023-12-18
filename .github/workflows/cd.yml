@@ -6,7 +6,7 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
@@ -35,6 +35,8 @@ jobs:
     # Check vulnerabilities
     - name: Symfony Check Vulnerabilities
       run: symfony check:security
+      continue-on-error: true
+      
 
     # PHP CS FIXER
     - name: PHP-CS-Fixer
